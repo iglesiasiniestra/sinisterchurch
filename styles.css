@@ -25,6 +25,8 @@ a {
   align-items: center;
   background-color: #0D0D0D;
   padding: 10px 20px;
+  position: sticky;
+  
 }
 
 .menu {
