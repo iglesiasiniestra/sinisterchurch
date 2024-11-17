@@ -19,7 +19,7 @@ a {
 }
 
 <nav class="navbar">
-  <img src="path-to-your-logo.png" alt="Logo" class="logo">
+  <img src="images/icons/favicon.ico" alt="Logo" class="logo">
   <input type="checkbox" id="menu-toggle" class="menu-toggle">
   <label for="menu-toggle" class="hamburger">
     <span class="bar"></span>
