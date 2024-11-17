@@ -109,16 +109,7 @@ body {
   .menu li {
     margin-bottom: 10px;
   }
-
-  .language-button {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-  }
-}
-
-/* Burger Menu Animation */
+  /* Burger Menu Animation */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -129,6 +120,16 @@ body {
     transform: translateY(0);
   }
 }
+
+  .language-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+
 
 /* Hero Section */
 .hero {
