@@ -27,7 +27,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.8); /* Black with 80% transparency */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
   padding: 10px 20px;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -94,11 +94,11 @@ a {
 
   .menu {
     position: absolute;
-    top: 60px; /* Adjusts to appear below navbar */
-    right: 20px; /* Aligns with the hamburger */
+    top: 60px; /* Displays below the hamburger menu */
+    left: 10px; /* Aligns with the burger menu icon */
     display: none;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
     border-radius: 5px;
     padding: 10px;
     animation: slide-down 0.3s ease-in-out; /* Smooth animation */
@@ -121,6 +121,18 @@ a {
     top: 10px; /* Aligns it vertically with the hamburger */
     right: 20px; /* Keeps it on the far right */
     width: auto; /* Ensures it doesn’t stretch */
+  }
+}
+
+/* Burger Menu Animation */
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
