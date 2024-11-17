@@ -20,26 +20,23 @@ a {
 
 /* Navbar Styling */
 .navbar {
-  position: fixed; /* Keeps the navbar fixed at the top */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Stretches the navbar across the screen */
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8); /* Black with 80% transparency */
   padding: 10px 20px;
-  z-index: 1000; /* Ensures it stays above other elements */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Adds a slight shadow for better visibility */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Ensures content below the navbar doesn't overlap */
-body {
-  padding-top: 70px; /* Adjust based on the navbar height */
-}
-
+/* Menu Styling */
 .menu {
   display: flex;
+  align-items: center;
   list-style-type: none;
   margin: 0;
 }
@@ -56,17 +53,20 @@ body {
 }
 
 .menu li a i {
-  margin-right: 8px; /* Space between icon and text */
+  margin-right: 8px;
 }
 
+/* Language Button Styling */
 .language-button {
-  padding: 4px 6px; /* Reduce height of language button */
+  padding: 4px 6px;
   background-color: #ff6b6b;
   color: white;
   text-decoration: none;
   border-radius: 5px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
+  margin-left: auto; /* Pushes the button to the far right */
 }
 
 .language-button i {
@@ -88,33 +88,39 @@ body {
 /* Mobile Menu Display */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row; /* Keeps navbar horizontal */
+    justify-content: space-between;
   }
 
   .menu {
+    position: absolute;
+    top: 60px; /* Adjusts to appear below navbar */
+    right: 20px; /* Aligns with the hamburger */
     display: none;
     flex-direction: column;
-    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    border-radius: 5px;
+    padding: 10px;
+    animation: slide-down 0.3s ease-in-out; /* Smooth animation */
+  }
+
+  .menu li {
+    margin: 10px 0;
   }
 
   .menu-toggle:checked + .hamburger + .menu {
-    display: flex;
+    display: flex; /* Shows menu when burger is clicked */
   }
 
   .hamburger {
     display: block;
   }
 
-  .menu li {
-    margin-bottom: 10px;
-  }
-
   .language-button {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
+    position: absolute;
+    top: 10px; /* Aligns it vertically with the hamburger */
+    right: 20px; /* Keeps it on the far right */
+    width: auto; /* Ensures it doesn’t stretch */
   }
 }
 
