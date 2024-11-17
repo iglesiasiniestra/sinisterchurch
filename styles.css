@@ -1,0 +1,217 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0D0D0D;
+  color: #fff;
+  line-height: 1.6;
+  padding: 0px;
+}
+
+a {
+  color: #ff6b6b;
+  text-decoration: none;
+}
+
+<nav class="navbar">
+  <img src="path-to-your-logo.png" alt="Logo" class="logo">
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </label>
+  <ul class="menu">
+    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+    <li><a href="about.html"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
+    <li><a href="invitations.html"><i class="fas fa-ticket-alt"></i> Invitaciones</a></li>
+    <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Próximos Eventos</a></li>
+    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contáctanos</a></li>
+  </ul>
+  <a href="https://iglesiasiniestra.org" class="language-button"><i class="fas fa-globe"></i> English</a>
+</nav>
+
+/* Ensures content below the navbar doesn't overlap */
+body {
+  padding-top: 70px; /* Adjust based on the navbar height */
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu li a i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.language-button {
+  padding: 4px 6px; /* Reduce height of language button */
+  background-color: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.language-button i {
+  margin-right: 10px;
+}
+
+/* Hamburger Menu Styling */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile Menu Display */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu li {
+    margin-bottom: 10px;
+  }
+
+  .language-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background: url('hero-image.jpg') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4em; /* Slightly smaller font size for "Sinister Church" */
+  color: #fff; /* Text color remains white */
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.cta {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 6px 8px; /* Reduce height for the 'Learn More' button */
+  border-radius: 5px;
+  font-size: 1.2em;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.cta:hover {
+  background-color: #e65f5f;
+}
+
+/* Section Styling */
+.section {
+  max-width: 800px; /* Limit the width for better readability */
+  margin: 40px auto; /* Center the content */
+  padding: 20px;
+  background-color: #0D0D0D;
+  border-radius: 10px;
+  text-align: center
+}
+
+.section h2 {
+  color: #ff6b6b; /* Change section title color */
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.section p {
+  line-height: 1.6em;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Event Names in Color */
+.event-name {
+  color: #ff6b6b; /* Event names in the specified color */
+}
+#upcoming-events ul {
+  list-style-type: none;
+}
+
+#upcoming-events li {
+  font-size: 1.2em;
+  margin: 15px 0;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+#upcoming-events li strong {
+  color: #ff6b6b;
+}
+
+/* Padding for Footer and Hero */
+.hero, .section, .footer {
+  padding: 40px;
+}
+
+.section p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 40px;
+  background-color: #0D0D0D;
+  color: white;
+}
