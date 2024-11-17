@@ -103,7 +103,7 @@ a {
     background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
     border-radius: 5px;
     padding: 5px;
-    animation: slide-down 0.3s ease-in-out; /* Smooth animation */
+    animation: slide-down 0.2s ease-in-out; /* Smooth animation */
   }
 
   .menu li {
