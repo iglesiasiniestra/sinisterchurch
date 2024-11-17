@@ -20,17 +20,17 @@ a {
 
 /* Navbar Styling */
 .navbar {
-  position: fixed; /* Keeps the navbar fixed at the top */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Stretches the navbar across the screen */
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.8); /* Black with 80% transparency */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
   padding: 10px 20px;
-  z-index: 1000; /* Ensures it stays above other elements */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Adds a slight shadow for better visibility */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Logo Styling */
@@ -60,7 +60,7 @@ a {
 }
 
 .menu li a i {
-  margin-right: 8px; /* Space between icon and text */
+  margin-right: 8px;
 }
 
 /* Hamburger Menu Styling */
@@ -73,6 +73,8 @@ a {
   font-size: 24px;
   cursor: pointer;
   color: white;
+  position: relative;
+  z-index: 1100; /* Ensures it stays above the expanding menu */
 }
 
 .hamburger .bar {
@@ -84,6 +86,27 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
+/* Expanding Menu for Mobile */
+.menu {
+  position: absolute;
+  top: 50px; /* Slightly below the burger icon */
+  left: 10px; /* Aligns with the burger icon */
+  display: none;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  padding: 10px;
+  border-radius: 5px;
+  animation: fade-in 0.3s ease-in-out;
+}
+
+.menu li {
+  margin: 10px 0;
+}
+
+.menu-toggle:checked + .hamburger + .menu {
+  display: flex; /* Show menu when burger is checked */
+}
+
 /* Language Button Styling */
 .language-button {
   padding: 6px 10px;
@@ -93,54 +116,45 @@ a {
   border-radius: 5px;
   display: flex;
   align-items: center;
-  margin-left: auto;
   white-space: nowrap;
+  margin-left: auto;
 }
 
 .language-button i {
   margin-right: 5px;
 }
 
-/* Mobile Menu Display */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Black background for mobile menu */
-    padding: 10px 0;
-    animation: slide-down 0.3s ease-in-out; /* Animation for opening menu */
-  }
-
-  .menu-toggle:checked + .hamburger + .menu {
-    display: flex;
-  }
-
   .hamburger {
     display: block;
   }
 
+  .menu {
+    position: absolute;
+    top: 50px;
+    left: auto;
+    right: 10px; /* Expands next to the burger icon */
+    flex-direction: column;
+    width: auto; /* Keeps menu compact */
+  }
+
   .language-button {
-    align-self: center; /* Aligns the language button vertically */
-    margin-left: 10px; /* Keeps spacing consistent */
-    width: auto; /* Ensures it doesn't stretch */
+    align-self: center;
+    margin-top: 5px;
+    margin-left: 0;
+    width: auto;
   }
 }
 
 /* Burger Menu Animation */
-@keyframes slide-down {
+@keyframes fade-in {
   from {
-    transform: translateY(-50px);
     opacity: 0;
+    transform: translateY(-10px);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 /* Hero Section */
