@@ -18,24 +18,50 @@ a {
   text-decoration: none;
 }
 
-<nav class="navbar">
-  <img src="images/icons/favicon.ico" alt="Logo" class="logo">
-  <input type="checkbox" id="menu-toggle" class="menu-toggle">
-  <label for="menu-toggle" class="hamburger">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </label>
-  <ul class="menu">
-    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-    <li><a href="about.html"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
-    <li><a href="invitations.html"><i class="fas fa-ticket-alt"></i> Invitaciones</a></li>
-    <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Próximos Eventos</a></li>
-    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contáctanos</a></li>
-  </ul>
-  <a href="https://iglesiasiniestra.org" class="language-button"><i class="fas fa-globe"></i> English</a>
-</nav>
+/* Navbar Styling */
+.navbar {
+  position: fixed; /* Keeps the navbar fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Stretches the navbar across the screen */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Black with 80% transparency */
+  padding: 10px 20px;
+  z-index: 1000; /* Ensures it stays above other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Adds a slight shadow for better visibility */
+}
 
+/* Logo Styling */
+.navbar .logo {
+  height: 40px;
+  width: auto;
+  margin-right: 20px;
+}
+
+/* Menu Styling */
+.menu {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu li a i {
+  margin-right: 8px; /* Space between icon and text */
+}
 
 /* Hamburger Menu Styling */
 .menu-toggle {
@@ -49,17 +75,46 @@ a {
   color: white;
 }
 
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Language Button Styling */
+.language-button {
+  padding: 6px 10px;
+  background-color: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.language-button i {
+  margin-right: 5px;
+}
+
 /* Mobile Menu Display */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .menu {
     display: none;
     flex-direction: column;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background for mobile menu */
+    padding: 10px 0;
+    animation: slide-down 0.3s ease-in-out; /* Animation for opening menu */
   }
 
   .menu-toggle:checked + .hamburger + .menu {
@@ -70,18 +125,24 @@ a {
     display: block;
   }
 
-  .menu li {
-    margin-bottom: 10px;
-  }
-
   .language-button {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
+    align-self: center; /* Aligns the language button vertically */
+    margin-left: 10px; /* Keeps spacing consistent */
+    width: auto; /* Ensures it doesn't stretch */
   }
 }
 
+/* Burger Menu Animation */
+@keyframes slide-down {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /* Hero Section */
 .hero {
   background: url('hero-image.jpg') no-repeat center center/cover;
