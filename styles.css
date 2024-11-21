@@ -120,7 +120,7 @@ language-button {
 
   .menu li {
     width: 100%; /* Ensures the menu item spans full width */
-    padding: 20px; /* Adds padding for spacing (20px to the left) */
+    padding: 10px  20px; /* Adds padding for spacing (20px to the left) */
     text-align: left; /* Aligns the text to the left */
   }
 
