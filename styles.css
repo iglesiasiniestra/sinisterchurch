@@ -68,6 +68,11 @@ a {
   color: #ff6b6b; /* Accent color for the icon on hover */
 }
 
+/* Active effect for click or tap */
+.menu li a:active {
+  color: #ffcccb; /* Lighter shade of the accent color for click/tap */
+}
+
 
 /* Language Button Styling */
 .language-button {
