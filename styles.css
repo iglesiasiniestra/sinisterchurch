@@ -43,7 +43,7 @@ a {
 }
 
 .menu li {
-  margin-right: 20px; /* Space between menu items */
+  margin-right: 10px; /* Space between menu items */
 }
 
 .menu li a {
@@ -120,7 +120,7 @@ language-button {
 
   .menu li {
     width: 100%; /* Ensures the menu item spans full width */
-    padding: 10px  20px; /* Adds padding for spacing (20px to the left) */
+    padding: 0px  20px; /* Adds padding for spacing (20px to the left) */
     text-align: left; /* Aligns the text to the left */
   }
 
