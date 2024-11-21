@@ -120,7 +120,7 @@ language-button {
 
   .menu li {
     width: 100%; /* Ensures the menu item spans full width */
-    padding: 10px 20px; /* Adds padding for spacing from the edges */
+    padding: 10px 20px; /* Adds padding for spacing (20px to the left) */
     text-align: left; /* Aligns the text to the left */
   }
 
@@ -129,6 +129,7 @@ language-button {
     width: 100%; /* Fills the menu container */
     color: white; /* Default text color */
     text-decoration: none; /* Removes underline */
+    padding-left: 20px; /* Adds additional padding to the left of the link */
   }
 
   .menu li a:hover {
