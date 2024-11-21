@@ -109,29 +109,26 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.querySelector('.menu');
-    const hamburger = document.querySelector('.hamburger');
-    const menuLinks = document.querySelectorAll('.menu li a');
+    const menuToggle = document.getElementById('menu-toggle'); // The checkbox
+    const menu = document.querySelector('.menu'); // The menu
+    const menuLinks = document.querySelectorAll('.menu li a'); // All menu links
+    const hamburger = document.querySelector('.hamburger'); // The hamburger icon
 
-    // Function to close the menu
-    function closeMenu() {
-      menuToggle.checked = false;
-    }
-
-    // Close the menu when clicking a link
+    // Close menu on link click
     menuLinks.forEach(link => {
-      link.addEventListener('click', closeMenu);
+      link.addEventListener('click', function () {
+        menuToggle.checked = false; // Uncheck the toggle to close the menu
+      });
     });
 
-    // Close the menu when clicking outside the menu or the hamburger
+    // Close menu on outside click
     document.addEventListener('click', function (event) {
       if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
-        closeMenu();
+        menuToggle.checked = false; // Uncheck the toggle to close the menu
       }
     });
 
-    // Toggle the menu when clicking the hamburger icon
+    // Ensure the menu opens when the hamburger is clicked
     hamburger.addEventListener('click', function () {
       menuToggle.checked = !menuToggle.checked;
     });
