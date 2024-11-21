@@ -107,5 +107,32 @@
     <p>© 2024 Sinister Church. All rights reserved.</p>
   </div>
 
+<script>
+  document.addEventListener('click', function (event) {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.menu');
+    const hamburger = document.querySelector('.hamburger');
+    const menuLinks = document.querySelectorAll('.menu li a');
+
+    // Check if the click is on the hamburger icon
+    if (hamburger.contains(event.target)) {
+      menuToggle.checked = !menuToggle.checked; // Toggle the menu
+      return;
+    }
+
+    // Check if the click is on a menu link
+    menuLinks.forEach(link => {
+      if (link.contains(event.target)) {
+        menuToggle.checked = false; // Close the menu
+      }
+    });
+
+    // Check if the click is outside the menu
+    if (!menu.contains(event.target)) {
+      menuToggle.checked = false; // Close the menu
+    }
+  });
+</script>
+    
 </body>
 </html>
