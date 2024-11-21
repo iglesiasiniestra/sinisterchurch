@@ -108,7 +108,7 @@ language-button {
 @media (max-width: 768px) {
   .menu {
     position: absolute;
-    top: 55px; /* Displays below the hamburger menu */
+    top: 60px; /* Displays below the hamburger menu */
     left: 0; /* Aligns the menu to the left edge */
     width: 100%; /* Spans the full width of the page */
     display: none;
