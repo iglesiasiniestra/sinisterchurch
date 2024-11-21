@@ -28,7 +28,7 @@ a {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-  padding: 10px 20px;
+  padding: 20px 20px;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
@@ -109,7 +109,7 @@ language-button {
   .menu {
     position: absolute;
     top: 60px; /* Displays below the hamburger menu */
-    left: 20px; /* Aligns the menu to the left edge */
+    left: 0; /* Aligns the menu to the left edge */
     width: 100%; /* Spans the full width of the page */
     display: none;
     flex-direction: column; /* Stacks menu items vertically */
