@@ -140,9 +140,7 @@ language-button {
     display: flex; /* Shows the menu when burger is clicked */
   }
 
-  .hamburger {
-    display: block;
-  }
+  
 }
 
 /* Burger Menu Animation */
