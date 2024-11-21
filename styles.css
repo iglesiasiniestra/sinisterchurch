@@ -109,12 +109,12 @@ language-button {
   .menu {
     position: absolute;
     top: 60px; /* Displays below the hamburger menu */
-    left: 0; /* Aligns the menu to the left edge */
+    left: 10px; /* Aligns the menu to the left edge */
     width: 100%; /* Spans the full width of the page */
     display: none;
     flex-direction: column; /* Stacks menu items vertically */
     background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
-    padding: 20px 0;
+    padding: 10px 0;
     animation: slide-down 0.3s ease-in-out; /* Smooth animation */
   }
 
