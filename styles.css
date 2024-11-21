@@ -33,8 +33,19 @@ a {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* Menu Styling */
-/* Default Menu Link Styling */
+/* Default Menu Styling (Desktop/Browser Mode) */
+.menu {
+  display: flex; /* Keeps the menu items horizontal */
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px; /* Space between menu items */
+}
+
 .menu li a {
   color: white; /* Default text color */
   text-decoration: none;
@@ -86,44 +97,33 @@ a {
   color: white;
 }
 
-/* Mobile Menu Display */
+/* Mobile Menu Styling */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: row; /* Keeps navbar horizontal */
-    justify-content: space-between;
-  }
-
   .menu {
     position: absolute;
-    top: 60px; /* Displays below the hamburger menu */
-    left: 0; /* Aligns the menu to the full width */
-    width: 100%; /* Ensures the menu spans the full width of the page */
+    top: 60px; /* Aligns below the navbar */
+    left: 0;
+    width: 100%; /* Spans the full width */
     display: none;
     flex-direction: column; /* Stacks menu items vertically */
-    align-items: flex-start; /* Aligns items to the left */
-    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
-    border-radius: 5px;
-    padding: 5px;
-    animation: slide-down 0.2s ease-in-out; /* Smooth animation */
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+    padding: 10px 0;
+    animation: slide-down 0.3s ease-in-out; /* Smooth animation */
   }
 
   .menu li {
     margin: 10px 0;
-    width: 100%; /* Ensures full-width clickable area */
-  }
-
-  .menu li a {
-    width: 100%; /* Fills the menu container */
-    padding-left: 10px; /* Adds spacing for left alignment */
+    text-align: left; /* Aligns text and icon to the left */
   }
 
   .menu-toggle:checked + .hamburger + .menu {
-    display: flex; /* Shows menu when burger is clicked */
+    display: flex; /* Shows the menu when burger is clicked */
   }
 
   .hamburger {
     display: block;
   }
+}
 
   .language-button {
     position: absolute;
