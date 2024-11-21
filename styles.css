@@ -68,6 +68,7 @@ a {
   color: #ff6b6b; /* Accent color for the icon on hover */
 }
 
+
 /* Language Button Styling */
 .language-button {
   padding: 4px 6px;
@@ -83,6 +84,12 @@ a {
 
 .language-button i {
   margin-right: 10px;
+}
+language-button {
+  position: absolute;
+  top: 10px; /* Aligns it vertically with the hamburger */
+  right: 20px; /* Keeps it on the far right */
+  width: auto; /* Ensures it doesn’t stretch */
 }
 
 /* Hamburger Menu Styling */
@@ -122,14 +129,6 @@ a {
 
   .hamburger {
     display: block;
-  }
-}
-
-  .language-button {
-    position: absolute;
-    top: 10px; /* Aligns it vertically with the hamburger */
-    right: 20px; /* Keeps it on the far right */
-    width: auto; /* Ensures it doesn’t stretch */
   }
 }
 
