@@ -109,7 +109,7 @@ language-button {
   .menu {
     position: absolute;
     top: 60px; /* Displays below the hamburger menu */
-    left: 0; /* Aligns the menu to the left edge */
+    left: 10px; /* Aligns the menu to the left edge */
     width: 100%; /* Spans the full width of the page */
     display: none;
     flex-direction: column; /* Stacks menu items vertically */
