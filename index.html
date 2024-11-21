@@ -107,7 +107,22 @@
     <p>© 2024 Sinister Church. All rights reserved.</p>
   </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const preloadImages = [
+      'images/hero-image.jpg',  // Hero image for the index page
+      'images/about-hero.jpg', // Hero image for the About Us page
+      'images/invitations-hero.jpg', // Hero image for the Invitations page
+      'images/events-hero.jpg', // Hero image for the Events page
+      'images/contact-hero.jpg' // Hero image for the Contact Us page
+    ];
 
+    preloadImages.forEach(imagePath => {
+      const img = new Image();
+      img.src = imagePath;
+    });
+  });
+</script>
     
 </body>
 </html>
