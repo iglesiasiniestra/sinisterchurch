@@ -108,9 +108,9 @@ language-button {
 @media (max-width: 768px) {
   .menu {
     position: absolute;
-    top: 60px; /* Aligns below the navbar */
-    left: 0;
-    width: 100%; /* Spans the full width */
+    top: 60px; /* Displays below the navbar */
+    left: 0; /* Aligns the menu to the full width */
+    width: 100%; /* Spans the full width of the page */
     display: none;
     flex-direction: column; /* Stacks menu items vertically */
     background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
@@ -120,11 +120,23 @@ language-button {
 
   .menu li {
     margin: 10px 0;
-    text-align: left; /* Aligns text and icon to the left */
+    text-align: left; /* Aligns the menu items to the left */
+    padding-left: 20px; /* Adds padding to create space from the edge */
+  }
+
+  .menu li a {
+    display: block; /* Ensures the link fills the full width of the menu */
+    width: 100%; /* Makes the clickable area span the full width */
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu li a:hover {
+    color: #ff6b6b; /* Accent color on hover */
   }
 
   .menu-toggle:checked + .hamburger + .menu {
-    display: flex; /* Shows the menu when burger is clicked */
+    display: flex; /* Shows menu when burger is clicked */
   }
 
   .hamburger {
